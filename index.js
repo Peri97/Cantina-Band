@@ -33,6 +33,8 @@ client.on("message", async message => {
   } else if (message.content.startsWith(`${prefix}stop`)) {
     stop(message, serverQueue);
     return;
+  } else if (message.content.startsWith(`${prefix}help`)) {
+    message.channel.send("COMMANDS:\n§play URL\n§stop\n§skip");
   } else {
     message.channel.send("You need to enter a valid command!");
   }
